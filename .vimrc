@@ -147,3 +147,15 @@ else
 endif
 
 " }}}
+
+
+" {{{ Shortcuts
+
+" Tagbar
+nnoremap <leader>tb :TagbarToggle<cr>
+
+" Disable F1 key
+map <F1> <Esc>
+imap <F1> <Esc>
+
+" }}}

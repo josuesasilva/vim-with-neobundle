@@ -20,7 +20,9 @@ My vim with Neobundle plugin manager
 3.Install the custom font
 
 `mkdir -p ~/.fonts`
+
 `cp ~/.vim/font/Droid\ Sans\ Mono\ for\ Powerline.otf ~/.fonts`
+
 `fc-cache -vf`
 
 4.Start vim to complete install

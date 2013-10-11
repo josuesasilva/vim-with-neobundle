@@ -5,4 +5,16 @@ My vim with Neobundle plugin manager
 
 ### Install:
 
-* `curl -L https://github.com/josuesasilva/vim-with-neobundle/blob/master/install.sh | sh`
+**OPTIONAL** Backup your existing ~/.vimrc file and ~/.vim folder
+
+**OPTIONAL** Remove your existing ~/.vimrc file and ~/.vim folder
+
+1.Clone the repository
+
+`git clone https://github.com/josuesasilva/vim-with-neobundle.git ~/.vim`
+
+2.Make a link from the vim config to your `$HOME`
+
+`ln -s ~/.vim/.vimrc ~/.vimrc`
+
+3.Start vim to complete install

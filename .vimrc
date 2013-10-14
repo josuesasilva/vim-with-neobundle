@@ -40,8 +40,10 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'scrooloose/nerdcommenter'
 
 " vim-scripts repos
+NeoBundle 'django.vim'
 
 " Non github repos
 
@@ -162,5 +164,8 @@ nnoremap <leader>tb :TagbarToggle<cr>
 " Disable F1 key
 map <F1> <Esc>
 imap <F1> <Esc>
+
+" Unite
+nnoremap <Leader>bb :Unite buffer_tab<cr>
 
 " }}}

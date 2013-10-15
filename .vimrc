@@ -39,6 +39,7 @@ NeoBundle 'majutsushi/tagbar'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'scrooloose/nerdcommenter'
 
 " vim-scripts repos
@@ -92,11 +93,17 @@ set nospell
 
 " {{{ Settings
 
+" auto close preview buffer after auto-complete
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+" ---
+
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 " ---
 
 " vim-airline

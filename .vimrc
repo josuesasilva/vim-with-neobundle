@@ -6,14 +6,12 @@
 "   \_/ |_|_| |_| |_|_|  \___|
 "
 "
-" --------- Josué ---------
-"
 
 " {{{ NeoBundle
 
 if has('vim_starting')
-set nocompatible               " Be iMproved
-set runtimepath+=~/.vim/bundle/neobundle.vim/
+    set nocompatible               " Be iMproved
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 call neobundle#rc(expand('~/.vim/bundle/'))
@@ -38,12 +36,15 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'Shougo/neocomplete'
 NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'Shougo/vimfiler.vim'
+NeoBundle 'Yggdroot/indentLine'
 
 " vim-scripts repos
 NeoBundle 'django.vim'
+NeoBundle 'TaskList.vim'
 
 " Non github repos
 
@@ -109,26 +110,26 @@ autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:airline_detect_whitespace = 1
+let g:airline_enable_branch=1
 " ---
 
-" neosnippet
-" Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
+" Neocomplete
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#enable_auto_select = 1
+let g:neocomplete#enable_refresh_always = 1
+" ---
 
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
+" indentLine
+map <silent> <Leader>l :IndentLinesToggle<CR>
+let g:indentLine_enabled = 0
+let g:indentLine_char = '┊'
+let g:indentLine_color_term = 239
+" ---
 
-" For snippet_complete marker.
-if has('conceal')
-  set conceallevel=2 concealcursor=i
-endif
+" vimfiler
+let g:vimfiler_as_default_explorer = 1
 " ---
 
 " }}}
@@ -138,6 +139,8 @@ endif
 
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
 set laststatus=2
+set go-=T
+set go-=m
 
 if has("gui_running")
     set nu
@@ -153,6 +156,10 @@ endif
 
 " {{{ Shortcuts
 
+" New windows
+nnoremap <Leader>v <C-w>v
+nnoremap <Leader>h <C-w>s
+
 " Tagbar
 nnoremap <leader>tb :TagbarToggle<cr>
 
@@ -162,5 +169,11 @@ imap <F1> <Esc>
 
 " Unite
 nnoremap <Leader>bb :Unite buffer_tab<cr>
+
+" TaskList
+nnoremap <Leader>tl :TaskList<cr>
+
+" vimfiler
+nnoremap <Leader>e :VimFilerExplorer<cr>
 
 " }}}

@@ -100,9 +100,9 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 " ---
 
 " Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS ts=2 sts=2 sw=2
+autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags ts=2 sts=2 sw=2
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS ts=2 sts=2 sw=2
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 " ---

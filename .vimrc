@@ -41,6 +41,7 @@ NeoBundle 'Shougo/neocomplete'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'matze/vim-move'
 
 " vim-scripts repos
 NeoBundle 'django.vim'
@@ -146,6 +147,7 @@ if has("gui_running")
     set nu
     set background=light
     colorscheme solarized
+    set cursorline
 else
     set background=dark
     set t_Co=256

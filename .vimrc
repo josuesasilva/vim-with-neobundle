@@ -36,12 +36,17 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'Shougo/neocomplete'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'matze/vim-move'
+NeoBundle 'MarcWeber/vim-addon-mw-utils'
+NeoBundle 'tomtom/tlib_vim'
+NeoBundle 'garbas/vim-snipmate'
+NeoBundle 'honza/vim-snippets'
+NeoBundle 'tomasr/molokai'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'vim-scripts/bufkill.vim'
 
 " vim-scripts repos
 NeoBundle 'django.vim'
@@ -84,11 +89,16 @@ set backupdir=/tmp
 set noswapfile
 
 " automatically reload vimrc when it's saved
-au BufWritePost .vimrc so ~/.vimrc
+"au BufWritePost .vimrc so ~/.vimrc
 
-" Spell
-set spell spelllang=pt " show options 'z='
-set nospell
+" remover menu and scrollbars
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+
+" spell
+set spelllang=pt_br
 
 " }}}
 
@@ -104,22 +114,15 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS ts=2 sts=2 sw=2
 autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags ts=2 sts=2 sw=2
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS ts=2 sts=2 sw=2
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete ts=2 sts=2 sw=2
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 " ---
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_detect_whitespace = 1
-let g:airline_enable_branch=1
-" ---
-
-" Neocomplete
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#enable_auto_select = 1
-let g:neocomplete#enable_refresh_always = 1
+let g:airline_enable_branch = 1
 " ---
 
 " indentLine
@@ -138,15 +141,15 @@ let g:vimfiler_as_default_explorer = 1
 
 " {{{ Appearance
 
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
+set guifont=Terminess\ Powerline\ 10
 set laststatus=2
 set go-=T
 set go-=m
 
 if has("gui_running")
     set nu
-    set background=light
-    colorscheme solarized
+    set background=dark
+    colorscheme molokai
     set cursorline
 else
     set background=dark
@@ -161,6 +164,12 @@ endif
 " New windows
 nnoremap <Leader>v <C-w>v
 nnoremap <Leader>h <C-w>s
+
+" Buffer kill
+nnoremap <leader>c :BD<cr>
+
+" Next buffer
+nnoremap <leader>n :bNext<cr>
 
 " Tagbar
 nnoremap <leader>tb :TagbarToggle<cr>

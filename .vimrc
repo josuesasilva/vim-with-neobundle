@@ -47,6 +47,7 @@ NeoBundle 'honza/vim-snippets'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'vim-scripts/bufkill.vim'
+NeoBundle 'szw/vim-ctrlspace'
 
 " vim-scripts repos
 NeoBundle 'django.vim'

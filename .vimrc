@@ -88,6 +88,8 @@ set encoding=utf-8
 set fileencoding=utf-8
 set backupdir=/tmp
 set noswapfile
+set shell=/bin/bash
+set nohlsearch
 
 " automatically reload vimrc when it's saved
 "au BufWritePost .vimrc so ~/.vimrc

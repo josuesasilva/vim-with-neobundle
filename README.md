@@ -15,13 +15,13 @@ My vim with Neobundle plugin manager
 
 2.Make a link from the vim config to your `$HOME`
 
-`ln -s ~/.vim/.vimrc ~/.vimrc`
+`ln -sf ~/.vim/.vimrc ~/.vimrc`
 
 3.Install the custom font
 
 `mkdir -p ~/.fonts`
 
-`cp ~/.vim/font/Droid\ Sans\ Mono\ for\ Powerline.otf ~/.fonts`
+`cp -R ~/.vim/font/* ~/.fonts`
 
 `fc-cache -vf`
 

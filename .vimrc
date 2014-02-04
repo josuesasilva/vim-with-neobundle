@@ -144,7 +144,7 @@ let g:vimfiler_as_default_explorer = 1
 
 " {{{ Appearance
 
-set guifont=Monaco\ for\ Powerline\ 10
+set guifont=Terminess\ Powerline\ 10
 set laststatus=2
 set go-=T
 set go-=m

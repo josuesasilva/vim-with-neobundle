@@ -9,6 +9,11 @@ My vim with Neobundle plugin manager
 
 **OPTIONAL** Remove your existing ~/.vimrc file and ~/.vim folder
 
+**The automatic installer**
+
+`curl -L https://raw.github.com/josuesasilva/vim-with-neobundle/installer/install.sh | sh`
+
+**The manual way**
 1.Clone the repository
 
 `git clone https://github.com/josuesasilva/vim-with-neobundle.git ~/.vim`

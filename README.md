@@ -26,7 +26,7 @@ My vim with Neobundle plugin manager
 
 `mkdir -p ~/.fonts`
 
-`cp -R ~/.vim/font/* ~/.fonts`
+`cp -R ~/.vim/fonts/* ~/.fonts`
 
 `fc-cache -vf`
 

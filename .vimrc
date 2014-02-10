@@ -50,6 +50,7 @@ NeoBundle 'vim-scripts/bufkill.vim'
 NeoBundle 'szw/vim-ctrlspace'
 NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'tpope/vim-surround'
 
 " vim-scripts repos
 NeoBundle 'TaskList.vim'

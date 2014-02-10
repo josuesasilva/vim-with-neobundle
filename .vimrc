@@ -48,10 +48,10 @@ NeoBundle 'tomasr/molokai'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'vim-scripts/bufkill.vim'
 NeoBundle 'szw/vim-ctrlspace'
-NeoBundle 'othree/javascript-libraries-syntax.vim'
+NeoBundle 'marijnh/tern_for_vim'
+NeoBundle 'w0ng/vim-hybrid'
 
 " vim-scripts repos
-NeoBundle 'django.vim'
 NeoBundle 'TaskList.vim'
 
 " Non github repos
@@ -140,14 +140,8 @@ let g:indentLine_color_term = 239
 let g:vimfiler_as_default_explorer = 1
 " ---
 
-" javascript-libraries-syntax
-let g:used_javascript_libs = 'underscore,angularjs,jquery'
-
-autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
-autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 1
-autocmd BufReadPre *.js let b:javascript_lib_use_backbone = 0
-autocmd BufReadPre *.js let b:javascript_lib_use_prelude = 0
-autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
+" javascript syntax
+au FileType javascript call JavaScriptFold()
 " ---
 
 " }}}
@@ -163,7 +157,7 @@ set go-=m
 if has("gui_running")
     set nu
     set background=dark
-    colorscheme molokai
+    colorscheme hybrid-light
     set cursorline
 else
     set background=dark

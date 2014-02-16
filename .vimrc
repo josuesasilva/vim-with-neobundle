@@ -48,7 +48,6 @@ NeoBundle 'tomasr/molokai'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'vim-scripts/bufkill.vim'
 NeoBundle 'szw/vim-ctrlspace'
-NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
@@ -140,10 +139,6 @@ let g:indentLine_color_term = 239
 
 " vimfiler
 let g:vimfiler_as_default_explorer = 1
-" ---
-
-" javascript syntax
-au FileType javascript call JavaScriptFold()
 " ---
 
 " }}}

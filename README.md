@@ -11,7 +11,7 @@ My vim with Neobundle plugin manager
 
 **The automatic installer**
 
-`curl -L https://raw.github.com/josuesasilva/vim-with-neobundle/installer/install.sh | sh`
+`curl -L https://raw.github.com/josuesasilva/vim-with-neobundle/master/install.sh | sh`
 
 **The manual way**
 1.Clone the repository

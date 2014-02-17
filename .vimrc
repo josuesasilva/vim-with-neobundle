@@ -51,6 +51,7 @@ NeoBundle 'szw/vim-ctrlspace'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-vividchalk'
 
 " vim-scripts repos
 NeoBundle 'TaskList.vim'

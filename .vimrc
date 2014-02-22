@@ -167,9 +167,13 @@ endif
 
 " {{{ Shortcuts
 
-" New windows
+" Split
 nnoremap <Leader>v <C-w>v
 nnoremap <Leader>h <C-w>s
+
+" Resize vertical split
+nnoremap > <C-w>>
+nnoremap < <C-w><
 
 " Buffer kill
 nnoremap <leader>c :BD<cr>
@@ -192,5 +196,8 @@ nnoremap <Leader>tl :TaskList<cr>
 
 " vimfiler
 nnoremap <Leader>e :VimFilerExplorer<cr>
+
+" run sh
+nnoremap <silent><F5> :!./%<CR>
 
 " }}}

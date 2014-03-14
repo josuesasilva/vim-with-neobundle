@@ -52,6 +52,7 @@ NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-vividchalk'
+NeoBundle 'mateusbraga/vim-spell-pt-br'
 
 " vim-scripts repos
 NeoBundle 'TaskList.vim'

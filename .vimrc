@@ -43,6 +43,8 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-vividchalk'
 NeoBundle 'josuesasilva/vim-spell-pt-br'
 NeoBundle 'dag/vim-fish'
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'
 
 " vim-scripts repos
 NeoBundle 'TaskList.vim'
@@ -130,6 +132,16 @@ let g:indentLine_color_term = 239
 
 " vimfiler
 let g:vimfiler_as_default_explorer = 1
+" ---
+
+" ultisnips
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 " ---
 
 " }}}

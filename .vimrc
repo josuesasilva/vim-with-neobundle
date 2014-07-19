@@ -167,7 +167,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " {{{ Appearance
 
-set guifont=Monaco\ for\ Powerline\ 10
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10 
 set laststatus=2
 set go-=T
 set go-=m
@@ -175,7 +175,7 @@ set go-=m
 if has("gui_running")
     set nu
     set background=dark
-    colorscheme hybrid-light
+    colorscheme molokai
     set cursorline
 else
     set background=dark
@@ -219,5 +219,11 @@ nnoremap <Leader>e :VimFilerExplorer<cr>
 
 " run sh
 nnoremap <silent><F5> :!./%<CR>
+
+" edit .vimrc
+nnoremap <leader>ev :e ~/.vimrc<cr>
+
+" edit config.fish
+nnoremap <leader>ef :e ~/.config/fish/config.fish<cr>
 
 " }}}

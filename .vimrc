@@ -86,6 +86,7 @@ set fileencoding=utf-8
 set backupdir=/tmp
 set noswapfile
 set nohlsearch
+set backspace=indent,eol,start
 
 " automatically reload vimrc when it's saved
 "au BufWritePost .vimrc so ~/.vimrc

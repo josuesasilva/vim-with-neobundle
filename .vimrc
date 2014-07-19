@@ -8,6 +8,7 @@
 "
 
 " {{{ NeoBundle
+set shell=/bin/bash
 
 if has('vim_starting')
     set nocompatible               " Be iMproved
@@ -52,7 +53,8 @@ NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-vividchalk'
-NeoBundle 'mateusbraga/vim-spell-pt-br'
+NeoBundle 'josuesasilva/vim-spell-pt-br'
+NeoBundle 'dag/vim-fish'
 
 " vim-scripts repos
 NeoBundle 'TaskList.vim'
@@ -92,7 +94,6 @@ set encoding=utf-8
 set fileencoding=utf-8
 set backupdir=/tmp
 set noswapfile
-set shell=/bin/bash
 set nohlsearch
 
 " automatically reload vimrc when it's saved

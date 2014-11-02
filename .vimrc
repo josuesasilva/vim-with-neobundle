@@ -46,6 +46,7 @@ NeoBundle 'dag/vim-fish'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'funtoo/funtoo-syntax'
 
 " vim-scripts repos
 NeoBundle 'TaskList.vim'
@@ -167,7 +168,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " {{{ Appearance
 
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10 
+set guifont=Monospace\ 11
 set laststatus=2
 set go-=T
 set go-=m
